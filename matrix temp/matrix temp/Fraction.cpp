@@ -41,7 +41,7 @@ Fraction::Fraction(const int& nNumerator, const int& nDenominator) : numerator(n
 }
 Fraction::Fraction(string input)
 {
-    regex reg("-?[0-9]+(/-?[0-9]+)?");
+    regex reg("-?[0-9]+( */ *-?[0-9]+)?");
 
     if (!regex_match(input, reg)) throw INIT_STR_ERROR;
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 struct Point
@@ -37,8 +38,19 @@ class C2
 
 int main()
 {
-    Point p[3] = { Point(2, 5), Point(5, 8), Point(8, 9) };
-    C1 c1(p);
-    cout << c1.vp.at(1).x;
+    vector<int> v = { 5, 8, 66, 9, 4, 8, 58 };
+    vector<int>::iterator it = v.begin() + 6;
+    v.erase(find(v.begin(), v.end(), 4));
+    //it = find(v.begin(), v.end(), *it);
+
+    cout << v.size() << endl;
+
+    for (size_t i = 0; i < v.size(); ++i)
+        cout << v[i] << endl;
+
+    //cout << *it << endl;
+    find(v.begin(), v.end(), *it);
+    //cout << (v.end() == find(v.begin(), v.end(), *it)) << endl;
+
     system("pause");
 }

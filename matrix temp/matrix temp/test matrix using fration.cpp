@@ -4,22 +4,20 @@
 #include <vector>
 int main()
 {
-    return (-1) % 3;
-    return 69 / 60;
-    vector<int> v;
-    v.reserve(4);
-    return v.size();
+    Fraction a(20), l(1), d(10);
+    Fraction result((string)(((l + a) / Fraction(32)) * (l * a / Fraction(32)) + a) * a / Fraction(16) * (Fraction(1) - d / Fraction(512)));
+    cout << (double)result;
     /*Matrix<Fraction> m1(3, 3), m2(3, 3), m3(3, 3);
     cin >> m1 >> m2;
     m3 = m1 * m2;
-    cout << m3;*/
+    cout << m3;
     Fraction f;
 
     while (1)
     {
         cin >> f;
         cout << '\r' << f << endl;
-    }
+    }*/
 
     system("pause");
     return 0;
